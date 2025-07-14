@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+$Gold-500: hsl(31, 77%, 52%);
+$Cyan-800: hsl(184, 100%, 22%);
+$Green-950: hsl(179, 100%, 13%);
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Gray-100: hsl(0, 0%, 95%);
+$Responsive-Width:992px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-container{
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 350px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 3rem 1rem;
+        @media (min-width: $Responsive-Width) {
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+        .card{
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            &:nth-child(1){
+                background-color: $Gold-500;
+                button{
+                    color: $Gold-500;
+                }
+
+            }
+            &:nth-child(2){
+                background-color: $Cyan-800;
+                button{
+                    color: $Cyan-800;
+                }
+                
+            }
+            &:nth-child(3){
+                background-color: $Green-950;
+                button{
+                    color: $Green-950;
+                }
+                
+            }
+            .content{
+                img{
+                    width: 40px;
+                    height: auto;
+
+                }
+                h2{
+                    margin: 1rem 0;
+                    color: $Gray-100;
+
+                }
+                p{
+                    color: $Transparent-white;
+                    font-size: 13px;
+                    line-height: 1.5;
+                 
+
+                }
+
+            }
+            button{
+                padding: 0.5rem 1rem;
+                border-radius: 30px;
+                border: none;
+                font-size: 12px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
