@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$Responsive-Width:428px;
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    padding: 0 10%;
+    background-color:rgb(193, 178, 209) ;
+    @media  screen and (max-width:$Responsive-Width) {
+        padding: 0 3%;
+        
+    }
+
+}
+
+#hero {
+    height: 100vh;
+    overflow: hidden;
+    @media  screen and (max-width:$Responsive-Width) {
+        overflow: visible;
+        
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        animation: TopIn 1.4s ease-in-out forwards;
+        opacity: 0;
+        animation-delay: 0.3s;
+         @media  screen and (max-width:$Responsive-Width) 
+         {
+            flex-direction: column;
+            gap: 30px;
+        }
+        .header-logo {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgb(97, 92, 92);
+
+            span {
+                font-size: 72px;
+                color: rgb(140, 136, 136);
+                line-height: 0.3;
+            }
+        }
+        nav{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            @media  screen and (max-width:$Responsive-Width) {
+            flex-direction: column;
+            gap: 20px; 
+             }
+            .nav-item {
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                color: gray;
+                transition: 0.3s;
+                cursor: pointer;
+                text-transform: capitalize;
+                text-decoration: none;
+                &:hover {
+                    color: rgb(211, 116, 211);
+                }
+
+            }
+
+        }
+        .header-btn{
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: rgb(174, 123, 222);
+            color: white;
+            height: 45px;
+            width: 150px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 5%;
+
+            &:hover {
+                background-color: rgb(208, 81, 208);
+            }
+
+        }
+
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        @media  screen and (max-width:$Responsive-Width) 
+         {
+            display: flex;
+            flex-direction: column;
+            padding-top: 80px;
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            height: 65vh;
+            margin-top:55px;
+            h3 {
+                font-size: 2rem;
+                color: rgb(97, 92, 92);
+                margin-top: 85px;
+                animation: bottomIn 1.4s ease-in-out forwards;
+                opacity: 0;
+                animation-delay: 0.2s;
+                @media  screen and (max-width:$Responsive-Width) 
+                {
+                        font-size: 1.5rem;
+                       }
+
+            }
+            h1{
+                font-size: 2.5rem;
+                color: rgb(174, 123, 222);
+                text-transform: uppercase;
+                font-weight: 900;
+                letter-spacing: 4px;
+                box-shadow: 0 2.5px gray;
+                margin: -25px 0;
+                animation: bottomIn 1.4s ease-in-out forwards;
+                opacity: 0;
+                animation-delay: 0.3s;
+                @media  screen and (max-width:$Responsive-Width) 
+                    {
+                       font-size: 2rem;
+                       letter-spacing: 3;
+                       margin: -10px 0;
+                    }
+
+                span{
+                    color: rgb(97, 92, 92);
+                }
+
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.8;
+                color: gray;
+                margin-top: 5px;
+                animation: bottomIn 1.4s ease-in-out forwards;
+                opacity: 0;
+                animation-delay: 0.4s;
+                @media  screen and (max-width:$Responsive-Width) 
+                    {
+                       margin-top: 0;
+                    }
+
+            }
+            .cta-section {
+                display: flex;
+                align-items: center;
+                gap: 80px;
+                @media  screen and (max-width:$Responsive-Width) 
+                    {
+                       flex-direction: column;
+                       gap: 20px;
+                    }
+                button {
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    height: 50px;
+                    width: 250px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    background-color: rgb(163, 93, 228);
+                    color: white;
+                    border-radius: 5px;
+                    box-shadow: 0 10px 10px rgb(79, 77, 77);
+                    animation: bottomIn 1.4s ease-in-out forwards;
+                    opacity: 0;
+                    animation-delay: 0.5s;
+                
+                    &:hover {
+                    background-color: rgb(203, 143, 203);
+                    }
+                    
+
+
+                }
+
+                
+
+            }
+            .social-section {
+                display: flex;
+                align-items: center;
+                gap: 70px;
+                padding: 10px;
+                @media  screen and (max-width:$Responsive-Width) 
+                    {
+                        justify-content: center;
+   
+                    }
+
+                a {
+                    text-decoration: none;
+                    color: #555;
+                    i {
+                       font-size: 18px;
+                       font-weight: 600;
+                       border: 2px solid rgb(36, 2, 68);
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       width: 20px;
+                       height: 20px;
+                       padding: 8px;
+                       margin-bottom: 80%;
+                       border-radius: 25px;
+                       color: rgb(98, 67, 126);
+                       cursor: pointer;
+                       transition: 0.3s;
+                       animation: bottomIn 1.4s ease-in-out forwards;
+                       opacity: 0;
+                       animation-delay: 0.6s;
+
+                       &:hover {
+                        color: darkgray;
+                        border-color:darkgray;
+                        transform: scale(1.1);
+                       }
+
+                       
+                    }
+
+                }
+
+                    
+                
+
+            }
+
+        }
+        .right {
+            .img-wrap {
+                .hero-img {
+                    width: 30%;
+                    position: absolute;
+                    bottom: 0;
+                    margin-left: 10%;
+                    animation: ImgIn 1.4s ease-in-out forwards;
+                    animation-delay: 0.2s;
+                    opacity: 0;
+                    @media  screen and (max-width:$Responsive-Width) 
+                    {
+                        display: none;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}
+
+@keyframes bottomIn {
+ from {
+    transform: translateY(250px);
+ }    
+ to {
+    transform: translateY(0);
+    opacity: 1;
+ }    
+}
+
+@keyframes TopIn {
+ from {
+    transform: translateY(-100px);
+ }    
+ to {
+    transform: translateY(0);
+    opacity: 1;
+ }    
+}
+
+@keyframes ImgIn {
+ from {
+    transform: translateY(250px) scale(0.8);
+ }    
+ to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+ }    
+}
